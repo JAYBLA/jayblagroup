@@ -1272,7 +1272,7 @@ button {
   padding: 10px 0px;
   align-items: center;
 }
-.header_top.bg_light {
+.bg_red {
   background-color: #ff0d33;
 }
 .header_top .primary_social_links a {

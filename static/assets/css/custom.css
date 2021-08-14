@@ -1,0 +1,17 @@
+@media (min-width: 768px){
+    .home_three_slider .item{
+        margin-top: -10% !important;
+    }
+
+    .secondary_header {
+        max-height: 20px !important;
+    }
+
+    .home_three_slider .slider_image{
+        width: 500px !important;
+    }
+
+    .home_three_slider .item_title{
+        font-size: 3rem;
+    }
+}
