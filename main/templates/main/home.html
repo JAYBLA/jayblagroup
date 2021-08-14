@@ -3,7 +3,7 @@
 
 
 {% block title %}
-    
+    {{title}}
 {% endblock title %}
 
 
@@ -15,118 +15,7 @@
 {% block content %}
 <main>
 
-
-    <!-- sidebar mobile menu - start
-    ================================================== -->
-    <div class="sidebar-menu-wrapper">
-        <div class="sidebar_mobile_menu">
-            <span class="close_btn"><i class="fa fa-times"></i></span>
-            <div class="mobile_menu_list clearfix">
-                <ul class="ul_li_block clearfix">
-                    <li class="active dropdown">
-                        <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="fase">Home</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index_1.html">Home Page V.1</a></li>
-                            <li><a href="index_2.html">Home Page V.2</a></li>
-                            <li><a href="index_3.html">Home Page V.3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="fase">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="service_1.html">Service V.1</a></li>
-                            <li><a href="service_2.html">Service V.2</a></li>
-                            <li><a href="service_details.html">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="fase">Pages</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="pricing.html">Pricing Plans</a></li>
-                            <li><a href="team.html">Creative Team</a></li>
-                            <li class="dropdown">
-                                <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="fase">Our Portfolio</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="portfolio_metro.html">Portfolio Metro</a></li>
-                                    <li><a href="portfolio_masonry.html">Portfolio Masonry</a></li>
-                                    <li><a href="portfolio_details.html">Portfolio Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="faq.html">F.A.Q.</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="fase">Shop</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="shop.html">Our Shop</a></li>
-                            <li><a href="shop_details.html">Shop Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="fase">News</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog_grid.html">Blog Grid</a></li>
-                            <li><a href="blog_standard.html">Blog Standard</a></li>
-                            <li><a href="blog_details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Conatct</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="cart_sidebar">
-            <span class="close_btn"><i class="fa fa-times"></i></span>
-            <div class="cart_items_list">
-                <ul class="ul_li_block clearfix">
-                    <li>
-                        <div class="cart_item clearfix">
-                            <button type="button" class="remove_btn"><i class="fa fa-times"></i></button>
-                            <div class="item_image">
-                                <img src="{% static 'assets/images/recent_works/img_01.png' %}" alt="image_not_found">
-                            </div>
-                            <div class="item_content">
-                                <h3 class="item_title">
-                                    Smaing Podcast Epis Ode 15 With Phile
-                                </h3>
-                                <span class="item_price">$30.00</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="cart_item clearfix">
-                            <button type="button" class="remove_btn"><i class="fa fa-times"></i></button>
-                            <div class="item_image">
-                                <img src="{% static 'assets/images/recent_works/img_02.png' %}" alt="image_not_found">
-                            </div>
-                            <div class="item_content">
-                                <h3 class="item_title">
-                                    Smaing Podcast Epis Ode 15 With Phile
-                                </h3>
-                                <span class="item_price">$30.00</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <ul class="total_price ul_li_block clearfix">
-                <li><span>Total:</span> <small>$60.00</small></li>
-                <li><span>Vat:</span> <small>$5.00</small></li>
-                <li><span>SubtoTal</span> <small>$65.00</small></li>
-            </ul>
-            <ul class="btns_group ul_li clearfix">
-                <li><a class="bg_default_orange" href="#!">View Cart</a></li>
-                <li><a class="bg_default_yellow" href="#!">Checkout</a></li>
-            </ul>
-        </div>
-
-        <div class="overlay"></div>
-    </div>
-    <!-- sidebar mobile menu - end
-    ================================================== -->
-
+    {% include 'main/includes/right-side-menu.html' %}
 
     <!-- slider_section - start
     ================================================== -->
@@ -144,21 +33,16 @@
 
                         <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider_content text-white">
-                                <h4 class="small_title">Welcome to  Printem</h4>
-                                <h3 class="item_title text-uppercase text-white mb-0">rich Printing</h3>
+                                <h4 class="small_title">Welcome to  Jaybla Group</h4>
+                                <h3 class="item_title text-uppercase text-white mb-0">Corporate Identity Design & Printing</h3>
                                 <p>
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account
+                                    We offer very creative designs while maintaining quality whenever printing is needed from us!
+                                    
                                 </p>
                                 <ul class="btns_group ul_li clearfix">
                                     <li>
-                                        <a class="custom_btn bg_default_orange" target="_blank" href="portfolio_metro.html">
-                                            discover more
-                                            <span><i class="fa fa-arrow-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a class="custom_btn bg_default_yellow" target="_blank" href="service_1.html">
-                                            Our Service
+                                            Explore More
                                             <span><i class="fa fa-arrow-right"></i></span>
                                         </a>
                                     </li>
@@ -168,33 +52,27 @@
                     </div>
                 </div>
             </div>
-
             <div class="item" data-background="assets/images/slider/bg_01.jpg">
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
                         <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 order-last">
                             <div class="slider_image">
-                                <img src="{% static 'assets/images/slider/img_01.png' %}" alt="image_not_found">
+                                <img src="{% static 'assets/images/slider/promotional_materials.png' %}" alt="image_not_found">
                             </div>
                         </div>
 
                         <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider_content text-white">
-                                <h4 class="small_title">Welcome to  Printem</h4>
-                                <h3 class="item_title text-uppercase text-white mb-0">rich Printing</h3>
+                                <h4 class="small_title">Welcome to  Jaybla Group</h4>
+                                <h3 class="item_title text-uppercase text-white mb-0">Promotional Materials</h3>
                                 <p>
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account
+                                    We provide you with protional materials such as Banners, Tshirts & Caps, Mugs, Key Holders and Pens all printed at best quality.
+                                    
                                 </p>
                                 <ul class="btns_group ul_li clearfix">
                                     <li>
-                                        <a class="custom_btn bg_default_orange" target="_blank" href="portfolio_metro.html">
-                                            discover more
-                                            <span><i class="fa fa-arrow-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a class="custom_btn bg_default_yellow" target="_blank" href="service_1.html">
-                                            Our Service
+                                            Explore More
                                             <span><i class="fa fa-arrow-right"></i></span>
                                         </a>
                                     </li>
@@ -204,33 +82,27 @@
                     </div>
                 </div>
             </div>
-
             <div class="item" data-background="assets/images/slider/bg_01.jpg">
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
                         <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 order-last">
                             <div class="slider_image">
-                                <img src="{% static 'assets/images/slider/img_01.png' %}" alt="image_not_found">
+                                <img src="{% static 'assets/images/slider/signages.png' %}" alt="image_not_found">
                             </div>
                         </div>
 
                         <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider_content text-white">
-                                <h4 class="small_title">Welcome to  Printem</h4>
-                                <h3 class="item_title text-uppercase text-white mb-0">rich Printing</h3>
+                                <h4 class="small_title">Welcome to  Jaybla Group</h4>
+                                <h3 class="item_title text-uppercase text-white mb-0">2D & 3D Signages</h3>
                                 <p>
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account
+                                    We offer very creative designs while maintaining quality whenever printing is needed from us!
+                                    
                                 </p>
                                 <ul class="btns_group ul_li clearfix">
                                     <li>
-                                        <a class="custom_btn bg_default_orange" target="_blank" href="portfolio_metro.html">
-                                            discover more
-                                            <span><i class="fa fa-arrow-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a class="custom_btn bg_default_yellow" target="_blank" href="service_1.html">
-                                            Our Service
+                                            Explore More
                                             <span><i class="fa fa-arrow-right"></i></span>
                                         </a>
                                     </li>
@@ -240,33 +112,27 @@
                     </div>
                 </div>
             </div>
-
             <div class="item" data-background="assets/images/slider/bg_01.jpg">
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
                         <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 order-last">
                             <div class="slider_image">
-                                <img src="{% static 'assets/images/slider/img_01.png' %}" alt="image_not_found">
+                                <img src="{% static 'assets/images/slider/web.png' %}" alt="image_not_found">
                             </div>
                         </div>
 
                         <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider_content text-white">
-                                <h4 class="small_title">Welcome to  Printem</h4>
-                                <h3 class="item_title text-uppercase text-white mb-0">rich Printing</h3>
+                                <h4 class="small_title">Welcome to  Jaybla Group</h4>
+                                <h3 class="item_title text-uppercase text-white mb-0">Web Design and Development</h3>
                                 <p>
-                                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account
+                                    We offer very creative designs while maintaining quality whenever printing is needed from us!
+                                    
                                 </p>
                                 <ul class="btns_group ul_li clearfix">
                                     <li>
-                                        <a class="custom_btn bg_default_orange" target="_blank" href="portfolio_metro.html">
-                                            discover more
-                                            <span><i class="fa fa-arrow-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a class="custom_btn bg_default_yellow" target="_blank" href="service_1.html">
-                                            Our Service
+                                            Explore More
                                             <span><i class="fa fa-arrow-right"></i></span>
                                         </a>
                                     </li>

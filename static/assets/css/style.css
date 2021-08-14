@@ -705,6 +705,7 @@ strong, span, small, label, i {
   text-transform: uppercase;
   font-family: "Rubik", sans-serif;
   justify-content: space-between;
+  border-radius: 6px;
 }
 .custom_btn:before {
   top: 0px;
@@ -719,6 +720,7 @@ strong, span, small, label, i {
 }
 .custom_btn:hover {
   color: #ffffff;
+  border-radius: 4px;
 }
 .custom_btn:hover:before {
   left: 0px;
@@ -737,15 +739,15 @@ strong, span, small, label, i {
   position: relative;
   margin-right: -30px;
   color: #222222;
-  display: inline-block;
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
+  border-radius: 4px;
 }
 .custom_btn.bg_default_yellow {
   color: #fff;
 }
 .custom_btn.bg_default_yellow:before {
-  background: #ff0d33;
+  background: #000;
 }
 .custom_btn.bg_default_yellow:hover {
   color: #ffffff;
@@ -1143,19 +1145,19 @@ strong, span, small, label, i {
 }
 
 .bg_default_yellow {
-  background-color: #000;
+  background-color: #ff0d33;
 }
 
 .bg_default_purple {
-  background-color: #5f43c5;
+  background-color: #000;
 }
 
 .bg_default_pink {
-  background-color: #e6498f;
+  background-color: #ff0d33;
 }
 
 .bg_default_past {
-  background-color: #20ad96;
+  background-color: #000;
 }
 
 /* default color - end
@@ -1271,10 +1273,10 @@ button {
   align-items: center;
 }
 .header_top.bg_light {
-  background-color: #f5f6fa;
+  background-color: #ff0d33;
 }
 .header_top .primary_social_links a {
-  color: #7276b3;
+  color: #ffffff;
 }
 .header_top .primary_social_links a:hover {
   color: #ff0d33;
@@ -1284,7 +1286,7 @@ button {
   color: #ffffff;
 }
 .text-white .header_contact_info i {
-  color: #000;
+  color: #ffffff;
 }
 .text-white .select_option .nice-select > span {
   color: #ffffff;
@@ -1304,8 +1306,8 @@ button {
 }
 
 .header_contact_info li {
-  color: #7276b3;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 400;
   font-family: "Rubik", sans-serif;
 }
 .header_contact_info li:not(:last-child) {
@@ -1607,20 +1609,7 @@ button {
 .primary_header .main_menu > ul > .has_child > a:after {
   display: none;
 }
-.primary_header .search_btn {
-  width: 100%;
-  height: 100%;
-  display: block;
-  font-size: 16px;
-  min-width: 100px;
-  padding: 0px 30px;
-  line-height: 100px;
-  color: #757575;
-}
-.primary_header .search_btn:hover, .primary_header .search_btn.active {
-  color: #ffffff;
-  background-color: #ff0d33;
-}
+
 .primary_header .search_body_collapse .search_body {
   background-color: #ffffff;
   border-top: 1px solid #e6e6e6;
@@ -1672,7 +1661,6 @@ button {
   display: flex;
   margin: -10px 0px;
   align-items: center;
-  border-right: 1px solid #e2e2e2;
 }
 .secondary_header .header_icon_btns {
   width: 205px;
@@ -1681,10 +1669,9 @@ button {
   display: flex;
   margin: -10px 0px;
   align-items: center;
-  border-left: 1px solid #e2e2e2;
 }
 .secondary_header .header_contact_info li {
-  color: #757575;
+  color: #ffffff;
 }
 .secondary_header .header_items_list > li {
   padding: 0px;
@@ -1718,7 +1705,7 @@ button {
   background-color: #ffffff;
 }
 .secondary_header .main_menu > ul > li > a {
-  color: #757575;
+  color: #000;
 }
 .secondary_header .main_menu > ul > li:hover > a, .secondary_header .main_menu > ul > li.active > a {
   color: #ff0d33;
@@ -5156,7 +5143,7 @@ blockquote .blockquote_admin i {
   background: #ffffff;
 }
 .home_three_slider .owl-dots .owl-dot:hover span, .home_three_slider .owl-dots .owl-dot.active span {
-  background: #ffffff;
+  background: #ff0d33;
 }
 .home_three_slider .slider_image {
   float: left;
@@ -5187,9 +5174,9 @@ blockquote .blockquote_admin i {
 }
 .home_three_slider .item_title {
   line-height: 1;
-  font-size: 100px;
+  font-size: 70px;
   font-weight: 700;
-  letter-spacing: -7px;
+  letter-spacing: -2px;
   font-family: "Hind", sans-serif;
 }
 .home_three_slider p {
