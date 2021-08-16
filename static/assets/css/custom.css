@@ -1,4 +1,4 @@
-@media (min-width: 768px){
+@media (max-width: 1600px){
     .home_three_slider .item{
         margin-top: -10% !important;
     }

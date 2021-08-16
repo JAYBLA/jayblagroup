@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>{% block title %}{% endblock title %} | JayblaGroup</title>
+		<title>{% block title %}{% endblock title %} | Jaybla Group</title>
 		<link rel="shortcut icon" href="{% static 'assets/images/logo/favourite_icon_01.png' %}">
 
 		<!-- fraimwork - css include -->
@@ -124,20 +124,20 @@
 							<nav class="main_menu clearfix">
 								<ul class="ul_li_center clearfix">
 									<li class="active">
-										<a href="">Home</a>
+										<a href="/">Home</a>
 									</li>
 									<li class="has_child">
 										<a href="">Services We Provide</a>
 										<ul class="submenu">
-											<li><a href="service_1.html">Graphic Designing</a></li>
-											<li><a href="service_2.html">T-shirt Printing</a></li>
-											<li><a href="contact.html">2D & 3D Signages</a></li>
-											<li><a href="service_details.html">Banners and Stickers</a></li>
-											<li><a href="service_details.html">Promotion Materials</a></li>
-											<li><a href="contact.html">Web Design & Development</a></li>
+											<li><a href="{% url 'main:graphic_design' %}">Graphic Designing</a></li>
+											<li><a href="{% url 'main:tshirt_printing' %}">T-shirt Printing</a></li>
+											<li><a href="{% url 'main:signages' %}">2D & 3D Signages</a></li>
+											<li><a href="{% url 'main:banners_stickers' %}">Banners and Stickers</a></li>
+											<li><a href="{% url 'main:promotional_materials' %}">Promotion Materials</a></li>
+											<li><a href="https://bafrocodes.co.tz" target="_blank">Web Design & Development</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">Contact Us</a></li>
+									<li><a href="{% url 'main:contact' %}">Contact Us</a></li>
 									<li><a href="contact.html">Get A Quote</a></li>
 								</ul>
 							</nav>
@@ -172,52 +172,11 @@
 
 		<!-- footer_section - start
 		================================================== -->
-		<footer class="footer_section bg_gray clearfix">
+		<footer class="footer_section clearfix bg_gray">
 			<div class="container">
-
-				<div class="footer_brand_area border_bottom clearfix">
-					<div class="row align-items-center justify-content-lg-between">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="brand_logo">
-								<a href="#!">
-									<img src="{% static 'assets/images/logo/footer-logo.png' %}" alt="logo_not_found">
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-							<div class="brands_list">
-								<div class="logo_image">
-									<a href="#!">
-										<img src="{% static 'assets/images/brands/img_01.png' %}" alt="logo_not_found">
-									</a>
-								</div>
-
-								<div class="logo_image">
-									<a href="#!">
-										<img src="{% static 'assets/images/brands/img_02.png' %}" alt="logo_not_found">
-									</a>
-								</div>
-
-								<div class="logo_image">
-									<a href="#!">
-										<img src="{% static 'assets/images/brands/img_03.png' %}" alt="logo_not_found">
-									</a>
-								</div>
-
-								<div class="logo_image">
-									<a href="#!">
-										<img src="{% static 'assets/images/brands/img_04.png' %}" alt="logo_not_found">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
 				<div class="footer_widget_area clearfix">
 					<div class="row justify-content-lg-between">
-						<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="widget footer_useful_links">
 								<h3 class="footer_widget_title">Quick Links</h3>
 								<ul class="ul_li_block clearfix">
@@ -230,7 +189,7 @@
 							</div>
 						</div>
 
-						<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="widget footer_useful_links">
 								<h3 class="footer_widget_title">Services</h3>
 								<ul class="ul_li_block clearfix">
@@ -242,59 +201,12 @@
 								</ul>
 							</div>
 						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="widget recent_works_list">
-								<h3 class="footer_widget_title">Recent News</h3>
-								<ul class="ul_li_block clearfix">
-									<li>
-										<div class="small_blog clearfix">
-											<a class="item_image" target="_blank" href="blog_details.html">
-												<img src="{% static 'assets/images/recent_works/img_01.png' %}" alt="image_not_found">
-											</a>
-											<div class="item_content">
-												<h3 class="item_title">
-													<a target="_blank" href="blog_details.html">
-														Web Designers Can Help Restaura Move Into
-													</a>
-												</h3>
-												<span class="post_date"><i class="fa fa-calendar-alt"></i> 25 Nov 2020</span>
-											</div>
-										</div>
-									</li>
-
-									<li>
-										<div class="small_blog clearfix">
-											<a class="item_image" target="_blank" href="blog_details.html">
-												<img src="{% static 'assets/images/recent_works/img_02.png' %}" alt="image_not_found">
-											</a>
-											<div class="item_content">
-												<h3 class="item_title">
-													<a target="_blank" href="blog_details.html">
-														Building Facial Recognits Web Application React
-													</a>
-												</h3>
-												<span class="post_date"><i class="fa fa-calendar-alt"></i> 25 Nov 2020</span>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 							<div class="widget footer_contact_form">
-								<h3 class="footer_widget_title">Contact Us</h3>
-								<p class="mb_30">
-									Sed ut persiatis unde omnis iste natusec error sit voluptatem accusantium
-								</p>
-								<form action="#">
-									<div class="form_item">
-										<input type="email" name="email" placeholder="Enter Your Email">
-										<button type="submit" class="submit_btn"><i class="fa fa-arrow-right"></i></button>
-									</div>
-								</form>
-								<span class="footer_hotline"><i class="fa fa-phone"></i> +012 (345) 678 99</span>
+								<h3 class="footer_widget_title">Contacts</h3>
+								<span class="footer_hotline"><i class="fa fa-phone"></i> +012 (345) 678 99</span><br>
+								<span class="footer_hotline"><i class="fa fa-phone"></i> +012 (345) 678 99</span><br>
+								<span class="footer_hotline"><i class="fa fa-envelope"></i> info@jaybla.com</span>
 							</div>
 						</div>
 					</div>
@@ -322,14 +234,8 @@
 								</li>
 								<li>
 									<a class="bg_youtube" href="#!">
-										<i class="fa fa-youtube"></i>
-										<i class="fa fa-youtube"></i>
-									</a>
-								</li>
-								<li>
-									<a class="bg_linkedin" href="#!">
-										<i class="fa fa-linkedin"></i>
-										<i class="fa fa-linkedin"></i>
+										<i class="fa fa-instagram"></i>
+										<i class="fa fa-instagram"></i>
 									</a>
 								</li>
 							</ul>
