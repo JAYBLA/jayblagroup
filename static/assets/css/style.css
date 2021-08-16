@@ -381,6 +381,15 @@ strong, span, small, label, i {
   list-style: none;
 }
 
+.ul_li_block li {
+ font-size: 1.3rem;
+ color: #111; 
+}
+
+.ul_li_block li i{
+color: #ff0d33
+}
+
 /* list style settings - end
 ================================================== */
 /* rating star - start
@@ -1967,6 +1976,7 @@ button {
 ================================================== */
 /* header - end
 ==================================================================================================== */
+
 /* footer - start
 ==================================================================================================== */
 /* footer section - start */
@@ -1976,6 +1986,7 @@ button {
 .footer_section.bg_gray {
   background-color: #111;
 }
+
 .footer_section.bg_black {
   background-color: #212121;
 }

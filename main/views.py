@@ -43,7 +43,7 @@ def banners_stickers(request):
 def promotional_materials(request):
     template_name = 'main/promotional_materials.html'
     context = {
-        'title':"Home"    
+        'title':"Promotional Materials"    
         
     }    
     return render(request, template_name, context)

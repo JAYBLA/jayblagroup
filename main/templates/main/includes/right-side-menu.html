@@ -12,15 +12,15 @@
                     <li class="dropdown">
                         <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="fase">Services</a>
                         <ul class="dropdown-menu">
-                            <li><a href="service_1.html">Graphic Designing</a></li>
-                            <li><a href="service_2.html">T-shirt Printing</a></li>
-                            <li><a href="contact.html">2D & 3D Signages</a></li>
-                            <li><a href="service_details.html">Banners and Stickers</a></li>
-                            <li><a href="service_details.html">Promotion Materials</a></li>
-                            <li><a href="contact.html">Web Design & Development</a></li>
+                            <li><a href="{% url 'main:graphic_design' %}">Graphic Designing</a></li>
+                            <li><a href="{% url 'main:tshirt_printing' %}">T-shirt Printing</a></li>
+                            <li><a href="{% url 'main:signages' %}">2D & 3D Signages</a></li>
+                            <li><a href="{% url 'main:banners_stickers' %}">Banners and Stickers</a></li>
+                            <li><a href="{% url 'main:promotional_materials' %}">Promotion Materials</a></li>
+                            <li><a href="https://bafrocodes.co.tz">Web Design & Development</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{% url 'main:contact' %}">Contact</a></li>
                     <li><a href="contact.html">Get a Quote</a></li>
                 </ul>
             </div>
