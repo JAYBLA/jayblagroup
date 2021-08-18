@@ -35,6 +35,9 @@
 		<!-- custom - css include -->
 		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/custom.css' %}">
+
+		<!-- Sweet alert -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.5/dist/sweetalert2.min.css">
 	</head>
 
 
@@ -292,6 +295,11 @@
 		<!-- custom - jquery include -->
 		<script src="{% static 'assets/js/custom.js' %}"></script>
 
-
+		<script src="{% static 'assets/js/sweetalert2.js' %}"></script>
+		
+		{% block javascript %}
+			
+		{% endblock javascript %}
+			
 	</body>
 </html>

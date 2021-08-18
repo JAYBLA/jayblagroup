@@ -670,7 +670,7 @@ color: #ff0d33
 /* padding - margin setting - start 
 ================================================== */
 .sec_ptb_130 {
-  padding: 130px 0px;
+  padding: 100px 0px;
 }
 
 .mt__30 {
@@ -815,7 +815,7 @@ color: #ff0d33
   position: relative;
   text-align: center;
   color: #222222;
-  background-color: #000;
+  background-color: #efeeee;
   border-radius: 5px;
 }
 .icon_btn:before {
@@ -3071,6 +3071,7 @@ button {
   padding-right: 75px;
   margin: -30px auto 0px;
   background-color: #ffffff;
+  border-radius: 5px;
 }
 .service_card .item_type {
   display: block;

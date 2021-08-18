@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     
         #My_Apps
     'main',
+    
+        #Others
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

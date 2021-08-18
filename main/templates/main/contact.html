@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load widget_tweaks %}
+
 
 
 {% block title %}
@@ -29,7 +31,7 @@
 
 						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay=".1s">
 							<ul class="breadcrumb_nav ul_li_right clearfix">
-								<li><a href="index.html">Home</a></li>
+								<li><a href="/">Home</a></li>
 								<li>Contact Us</li>
 							</ul>
 						</div>
@@ -51,31 +53,27 @@
 								<div class="section_title mb_30 wow fadeInUp2" data-wow-delay=".1s">
 									<h4 class="small_title">Contact Us</h4>
 									<h2 class="big_title mb-0">
-										Every Single Update To Contact Us
+										Have Anything to Discuss with US?, Contact Now!
 									</h2>
 									<span class="biggest_title">Contact</span>
 								</div>
-								<p class="mb_30 wow fadeInUp2" data-wow-delay=".2s">
-									Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan
-									tium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dict
-								</p>
 								<ul class="contact_information_list ul_li_block clearfix">
 									<li class="wow fadeInUp2" data-wow-delay=".3s">
-										<div class="item_icon bg_default_orange"><i class="fal fa-map-marker-alt"></i></div>
+										<div class="item_icon bg_red"><i class="fa fa-map-marker text-light"></i></div>
 										<div class="item_content">
 											<h4>Locations</h4>
 											<p>205 Main Street, USA</p>
 										</div>
 									</li>
 									<li class="wow fadeInUp2" data-wow-delay=".4s">
-										<div class="item_icon bg_default_yellow"><i class="fal fa-envelope"></i></div>
+										<div class="item_icon bg_red"><i class="fa fa-envelope text-light"></i></div>
 										<div class="item_content">
 											<h4>Email Us</h4>
 											<p>support@gmail.com</p>
 										</div>
 									</li>
 									<li class="wow fadeInUp2" data-wow-delay=".5s">
-										<div class="item_icon bg_default_lightblue"><i class="fal fa-phone"></i></div>
+										<div class="item_icon bg_red"><i class="fa fa-phone text-light"></i></div>
 										<div class="item_content">
 											<h4>Phone Us</h4>
 											<p>+012 (345) 678 99</p>
@@ -85,43 +83,58 @@
 							</div>
 						</div>
 
-						<div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+						<div class="col-lg-6 col-md-8 col-sm-10 col-xs-12 shadow p-4">
 							<div class="contact_form">
-								<form id="contact-form" action="assets/mail.php" method="POST">
+								<form id="Contact-Form" action="" method="POST">
+									{% csrf_token %}                      
+									{% for hidden in form.hidden_fields %}
+									{{ hidden }}
+									{% endfor %}
 									<div class="form_item wow fadeInUp2" data-wow-delay=".1s">
 										<span class="input_title">Full Name</span>
 										<div class="position-relative">
-											<input id="input_user" type="text" name="name" placeholder="Write Your Name">
-											<label class="input_icon" for="input_user"><i class="fal fa-user"></i></label>
+											{% render_field form.full_name class="form-control" placeholder="Write Full Name" %}
+											{% for error in field.form.full_name.errors %}
+												<span class="help-block">{{ error }}</span>
+											{% endfor %}
+											<label class="input_icon" for="input_user"><i class="fa fa-user"></i></label>
 										</div>
 									</div>
 
 									<div class="form_item wow fadeInUp2" data-wow-delay=".2s">
 										<span class="input_title">Email Address</span>
 										<div class="position-relative">
-											<input id="input_email" type="email" name="email" placeholder="Write Your Email">
-											<label class="input_icon" for="input_email"><i class="fal fa-envelope"></i></label>
+											{% render_field form.email class="form-control" placeholder="Email Address" %}
+											{% for error in field.form.email.errors %}
+												<span class="help-block">{{ error }}</span>
+											{% endfor %}
+											<label class="input_icon" for="input_email"><i class="fa fa-envelope"></i></label>
 										</div>
 									</div>
 
 									<div class="form_item wow fadeInUp2" data-wow-delay=".3s">
 										<span class="input_title">Phone Number</span>
 										<div class="position-relative">
-											<input id="input_phone" type="tel" name="phone" placeholder="Write Your Phone Number">
-											<label class="input_icon" for="input_phone"><i class="fal fa-phone"></i></label>
+											{% render_field form.phone class="form-control" placeholder="Phone Number" %}
+											{% for error in field.form.phone.errors %}
+												<span class="help-block">{{ error }}</span>
+											{% endfor %}
+											<label class="input_icon" for="input_phone"><i class="fa fa-phone"></i></label>
 										</div>
 									</div>
 
 									<div class="form_item wow fadeInUp2" data-wow-delay=".4s">
 										<span class="input_title">Leave A Message</span>
-										<textarea name="message" placeholder="Write Your Message"></textarea>
+										{% render_field form.message class="form-control" placeholder="Leave your message" rows="5" %}
+										{% for error in field.form.message.errors %}
+											<span class="help-block">{{ error }}</span>
+										{% endfor %}
 									</div>
 
 									<button type="submit" class="custom_btn bg_default_orange wow fadeInUp2" data-wow-delay=".5s">
 										send message 
-										<span><i class="fal fa-arrow-right"></i></span>
-									</button>
-									<p class="ajax-response"></p>
+										<span><i class="fa fa-arrow-right"></i></span>
+									</button>					
 								</form>
 							</div>
 						</div>
@@ -136,6 +149,36 @@
 
 
 {% block javascript %}
+<script>
+	const form = document.getElementById('Contact-Form');
+	form.addEventListener('submit', submitHandler)
+  
+	function submitHandler(e){
+	  e.preventDefault();
+	  $.ajax({
+		type:'POST',
+		url:"{% url 'main:contact_post' %}",
+		data:$("#Contact-Form").serialize(),
+		success: function(data){
+		  if (data.msg == 'success'){
+			form.reset();
+			Swal.fire({
+			  icon: 'success',
+				title: 'Submitted Successfully!',
+				text: 'We will contact you as soon as possible!',
+			})
+		  }else{
+			Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'Something went wrong!',
+			})
+		  }
+		}
+	  })
+	}
+  
+  </script>
 {% endblock javascript %}
     
     

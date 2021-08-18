@@ -12,5 +12,5 @@ urlpatterns = [
     path('promotional-materials', views.promotional_materials, name='promotional_materials'),
     path('banners-and-stickers', views.banners_stickers, name='banners_stickers'),
     path('contact-us', views.contact, name='contact'),
-    
+    path('ajax-contact/', views.process_contact, name='contact_post'),    
 ]
