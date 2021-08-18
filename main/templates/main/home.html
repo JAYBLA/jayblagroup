@@ -22,7 +22,7 @@
     <section class="slider_section home_three_slider clearfix">
         <div class="main_slider owl-carousel owl-theme clearfix">
 
-            <div class="item" data-background="{% static 'assets/images/slider/bg_01.jpg' %}">
+            <div class="item" data-background="{% static 'assets/images/backgrounds/bg_01.jpg' %}">
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
                         <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 order-last">
@@ -327,14 +327,14 @@
 
     <!-- service_section - start
     ================================================== -->
-    <section class="service_section sec_ptb_130 bg_gray clearfix">
+    <section class="service_section sec_ptb_130 bg_gray clearfix" data-background="{% static 'assets/images/backgrounds/bg_03.jpg' %}">
         <div class="container">
 
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
                     <div class="section_title text-center mb_50 wow fadeInUp2" data-wow-delay=".1s">
                         <h4 class="small_title">What We Offers</h4>
-                        <h2 class="big_title mb-0">
+                        <h2 class="big_title mb-0 text-light">
                             We Provide Lot’s Of Printing & Branding Service
                         </h2>
                         <span class="biggest_title">Services</span>
@@ -346,12 +346,12 @@
                 <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".3s">
                     <div class="service_card clearfix">
                         <a class="item_image" target="_blank" href="service_details.html">
-                            <img src="{% static 'assets/images/services/img_16.jpg' %}" alt="image_not_found">
+                            <img src="{% static 'assets/images/services/graphic.jpg' %}" alt="image_not_found">
                         </a>
                         <div class="item_content">
                             <span class="item_type">Design & Printing</span>
                             <h3 class="item_title mb-0">Graphic Designing</h3>
-                            <a class="icon_btn" target="_blank" href="service_details.html"><i class="fa fa-arrow-right"></i></a>
+                            <a class="icon_btn" target="_blank" href="{% url 'main:graphic_design' %}"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -359,12 +359,12 @@
                 <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".5s">
                     <div class="service_card clearfix">
                         <a class="item_image" target="_blank" href="service_details.html">
-                            <img src="{% static 'assets/images/services/img_17.jpg' %}" alt="image_not_found">
+                            <img src="{% static 'assets/images/services/t-shirts.jpg' %}" alt="image_not_found">
                         </a>
                         <div class="item_content">
                             <span class="item_type">Design & Printing</span>
                             <h3 class="item_title mb-0">T-shirt Printing</h3>
-                            <a class="icon_btn" target="_blank" href="service_details.html"><i class="fa fa-arrow-right"></i></a>
+                            <a class="icon_btn" target="_blank" href="{% url 'main:tshirt_printing' %}"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -372,7 +372,7 @@
                 <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".7s">
                     <div class="service_card clearfix">
                         <a class="item_image" target="_blank" href="service_details.html">
-                            <img src="{% static 'assets/images/services/img_18.jpg' %}" alt="image_not_found">
+                            <img src="{% static 'assets/images/services/signages.jpg' %}" alt="image_not_found">
                         </a>
                         <div class="item_content">
                             <span class="item_type">Design & Printing</span>
@@ -384,7 +384,7 @@
                 <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".7s">
                     <div class="service_card clearfix">
                         <a class="item_image" target="_blank" href="service_details.html">
-                            <img src="{% static 'assets/images/services/img_18.jpg' %}" alt="image_not_found">
+                            <img src="{% static 'assets/images/services/banners.jpg' %}" alt="image_not_found">
                         </a>
                         <div class="item_content">
                             <span class="item_type">Design & Printing</span>
@@ -396,7 +396,7 @@
                 <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".7s">
                     <div class="service_card clearfix">
                         <a class="item_image" target="_blank" href="service_details.html">
-                            <img src="{% static 'assets/images/services/img_18.jpg' %}" alt="image_not_found">
+                            <img src="{% static 'assets/images/services/promotional.jpg' %}" alt="image_not_found">
                         </a>
                         <div class="item_content">
                             <span class="item_type">Design & Printing</span>
@@ -408,7 +408,7 @@
                 <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 wow fadeInUp2" data-wow-delay=".7s">
                     <div class="service_card clearfix">
                         <a class="item_image" target="_blank" href="service_details.html">
-                            <img src="{% static 'assets/images/services/img_18.jpg' %}" alt="image_not_found">
+                            <img src="{% static 'assets/images/services/web.jpg' %}" alt="image_not_found">
                         </a>
                         <div class="item_content">
                             <span class="item_type">IT & Technology</span>
