@@ -38,6 +38,7 @@
 
 		<!-- Sweet alert -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.5/dist/sweetalert2.min.css">
+		{% block stylesheet %}{% endblock stylesheet %}
 	</head>
 
 
@@ -57,7 +58,7 @@
 		<div class="preloader">
 			<div class="animation_preloader">
 				<div class="spinner"></div>
-				<p class="text-center">Loading...</p>
+				<p class="text-center">Loading..</p>
 			</div>
 			<div class="loader">
 				<div class="row vh-100">
@@ -111,8 +112,8 @@
 
 						<div class="col-lg-3">
 							<div class="brand_logo">
-								<a href="index.html">
-									<img src="{% static 'assets/images/logo/header-logo.png' %}" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
+								<a href="/">
+									<img src="{% static 'assets/images/logo/header-logo.png' %}" alt="logo_not_found">
 								</a>
 
 								<ul class="mobilemenu_btns_group ul_li_right clearfix">
@@ -149,7 +150,7 @@
 							<ul class="header_icon_btns ul_li_right clearfix">
 								<li>
 									<button type="button" class="mobile_menu_btn">
-										<img src="{% static 'assets/images/icons/bar_dot_1x.png' %}" srcset="assets/images/icons/bar_dot_2x.png 2x" alt="logo_not_found">
+										<img src="{% static 'assets/images/icons/bar_dot_1x.png' %}" alt="logo_not_found">
 									</button>
 								</li>
 							</ul>
@@ -184,8 +185,8 @@
 								<ul class="ul_li_block clearfix">
 									<li><a href="/">Home</a></li>
 									<li><a href="{% url 'main:contact' %}">Contact Us </a></li>
-									<li><a href="">Latest News</a></li>								
-									<li><a href="">Win Awards</a></li>
+									<!-- <li><a href="">Latest News</a></li>								
+									<li><a href="">Win Awards</a></li> -->
 								</ul>
 							</div>
 						</div>
