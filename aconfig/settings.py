@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['.bafrocodes.co.tz', 'bafrocodes.co.tz', 'www.bafrocodes.co.tz']
+    ALLOWED_HOSTS = ['.jaybla.com', 'jaybla.com', 'www.jaybla.com']
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE = True
