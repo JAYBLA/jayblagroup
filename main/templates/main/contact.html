@@ -101,8 +101,7 @@
 											{% render_field form.full_name class="form-control" placeholder="Write Full Name" %}
 											{% for error in field.form.full_name.errors %}
 												<span class="help-block">{{ error }}</span>
-											{% endfor %}
-											<label class="input_icon" for="input_user"><i class="fa fa-user"></i></label>
+											{% endfor %}											
 										</div>
 									</div>
 
@@ -112,8 +111,7 @@
 											{% render_field form.email class="form-control" placeholder="Email Address" %}
 											{% for error in field.form.email.errors %}
 												<span class="help-block">{{ error }}</span>
-											{% endfor %}
-											<label class="input_icon" for="input_email"><i class="fa fa-envelope"></i></label>
+											{% endfor %}											
 										</div>
 									</div>
 
@@ -124,7 +122,6 @@
 											{% for error in field.form.phone.errors %}
 												<span class="help-block">{{ error }}</span>
 											{% endfor %}
-											<label class="input_icon" for="input_phone"><i class="fa fa-phone"></i></label>
 										</div>
 									</div>
 
