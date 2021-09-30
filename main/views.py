@@ -9,7 +9,7 @@ from django.http import JsonResponse
 def home(request):
     template_name = 'main/home.html'
     context = {
-        'title':"Home"    
+        'title':"Serving With Pride"    
         
     }    
     return render(request, template_name, context)
