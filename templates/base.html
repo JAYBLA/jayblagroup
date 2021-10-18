@@ -172,7 +172,9 @@
         
 		<!-- main body - end
 		================================================== -->
-
+			<div class="whatsapp-float" id="whatsapp-float">
+				<a href="https://wa.link/kza0kf"><button class="btn btn-success"><i class="fa fa-whatsapp text-light"></i></button></a>
+			</div>
 		<!-- footer_section - start
 		================================================== -->
 		<footer class="footer_section clearfix bg_gray">
@@ -241,6 +243,12 @@
 										<i class="fa fa-instagram"></i>
 									</a>
 								</li>
+								<li>
+									<a class="bg_youtube" href="https://wa.link/kza0kf" target="_blank">
+										<i class="fa fa-whatsapp"></i>
+										<i class="fa fa-whatsapp"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -295,6 +303,15 @@
 		<script src="{% static 'assets/js/custom.js' %}"></script>
 
 		<script src="{% static 'assets/js/sweetalert2.js' %}"></script>
+		<script>
+			    $(window).scroll(function() {
+				if ($(this).scrollTop() > 3600) {
+					$('#whatsapp-float:hidden').stop(true, true).fadeIn();
+				} else {
+					$('#whatsapp-float').stop(true, true).fadeOut();
+				}
+				});
+		</script>
 		
 		{% block javascript %}
 			
