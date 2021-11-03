@@ -37,15 +37,7 @@
     font-size: 1em;
 }
 
-.whatsapp-float{
-    position:fixed;
-    top: 86%;
-    left: 5px;
-    z-index: 1;
+.floating-buttons{
+    z-index: 10000;
 }
 
-@media only screen and (min-width: 768px){
-    .whatsapp-float{
-        display: none;
-    }
-}
