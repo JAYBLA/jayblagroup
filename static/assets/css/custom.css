@@ -46,7 +46,7 @@
 }
 
 #social-sidebar {
- left: 0;
+ right: 0;
  position: fixed;
  top: 50%;
  z-index: 1000;
@@ -65,18 +65,18 @@
  line-height: 50px;
  position: relative;
  text-align: center;
-    cursor: pointer;
+ cursor: pointer;
 }
 #social-sidebar a:hover span {
- left: 120%;
+ right: 130%;
  opacity: 1;
 }
 #social-sidebar a span {
-  font: 12px "Open Sans", sans-serif;
-  text-transform: uppercase;
+ font: 12px "Open Sans", sans-serif;
+ text-transform: uppercase;
  border-radius: 3px;
  line-height: 24px;
- left: -100%;
+ right: -100%;
  margin-top: -16px;
  opacity: 0;
  padding: 4px 8px;
@@ -90,8 +90,8 @@
  content: "";
  display: block;
  height: 8px;
-  width: 8px;
- left: -4px;
+ width: 8px;
+ right: -4px;
  margin-top: -4px;
  position: absolute;
  top: 50%;
