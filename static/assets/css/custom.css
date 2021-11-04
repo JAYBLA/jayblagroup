@@ -119,3 +119,17 @@
 .copyright-footer{
     background-color: #000000;
 }
+
+.copyright-footer-top{
+    background-color: #ff0d33;
+    height: 2px;
+}
+.copyright-footer-top2{
+    background-color: #ffffff;
+    height: 2px;
+    opacity: 0.7;
+}
+
+.copyright_text{
+    font-size: 1.2em;
+}
