@@ -36,6 +36,10 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/custom.css' %}">
 
+		<!-- Side Social Icons -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/reset.css' %}">
+
+
 		<!-- Sweet alert -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.5/dist/sweetalert2.min.css">
 		{% block stylesheet %}{% endblock stylesheet %}
@@ -43,8 +47,6 @@
 
 
 	<body>
-
-
 		<!-- backtotop - start -->
 		<div id="thetop"></div>
 		<div id="backtotop">
@@ -172,10 +174,23 @@
         
 		<!-- main body - end
 		================================================== -->
-
+		<ul id="social-sidebar">
+			<li>
+			  <a class="entypo-twitter" href="https://twitter.com/Jaybla_group" target="_blank"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+			</li>
+			<li>
+			  <a class="entypo-facebook" href="https://facebook.com/Jaybla.Group/" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+			</li>
+			<li>
+			  <a class="entypo-instagram" href="https://www.instagram.com/jaybla_group/" target="_blank"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+			</li>
+			<li>
+			  <a class="entypo-whatsapp" href="https://wa.link/kza0kf" target="_blank"><i class="fa fa-whatsapp"></i><span>WhatsApp</span></a>
+			</li>
+		  </ul>
 		<!-- footer_section - start
 		================================================== -->
-		<footer class="footer_section clearfix bg_gray">
+		<footer class="footer_section bg_gray">
 			<div class="container">
 				<div class="footer_widget_area clearfix">
 					<div class="row justify-content-lg-between">
@@ -214,44 +229,9 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="footer_bottom_boxed bg_white clearfix">
-					<div class="row align-items-center justify-content-lg-between">
-						<div class="col-lg-6 col-md-6">
-							<p class="copyright_text mb-0">&copy;<script>document.write(new Date().getFullYear())</script> All Right Reserved || Jaybla Group</p>
-						</div>
-
-						<div class="col-lg-6 col-md-6">
-							<ul class="circle_social_links ul_li_right clearfix">
-								<li>
-									<a class="bg_facebook" href="https://facebook.com/Jaybla.Group/" target="_blank">
-										<i class="fa fa-facebook-f"></i>
-										<i class="fa fa-facebook-f"></i>
-									</a>
-								</li>
-								<li>
-									<a class="bg_twitter" href="https://twitter.com/Jaybla_group" target="_blank">
-										<i class="fa fa-twitter"></i>
-										<i class="fa fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a class="bg_youtube" href="https://www.instagram.com/jaybla_group/" target="_blank">
-										<i class="fa fa-instagram"></i>
-										<i class="fa fa-instagram"></i>
-									</a>
-								</li>
-								<li>
-									<a class="bg_youtube" href="https://wa.link/kza0kf" target="_blank">
-										<i class="fa fa-whatsapp"></i>
-										<i class="fa fa-whatsapp"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
+			</div>
+			<div class="container-fluid text-center copyright-footer py-3 mb-0">
+				<p class="copyright_text mb-0 text-light">&copy;<script>document.write(new Date().getFullYear())</script> Jaybla Group || All Right Reserved </p>
 			</div>
 		</footer>
 		<!-- footer_section - end
@@ -301,6 +281,7 @@
 		<script src="{% static 'assets/js/custom.js' %}"></script>
 
 		<script src="{% static 'assets/js/sweetalert2.js' %}"></script>
+	
 		
 		{% block javascript %}
 			

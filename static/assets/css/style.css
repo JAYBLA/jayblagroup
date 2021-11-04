@@ -23,12 +23,12 @@ Developer:		:  Rakibul Islam Dewan
 body {
   margin: 0px;
   padding: 0px;
-  font-size: 15px;
+  font-size: 15px !important;
   font-weight: 400;
   line-height: 1.867;
   font-style: normal;
   color: #757575;
-  font-family: "Hind", sans-serif;
+  font-family: "Hind", sans-serif !important;
   background-color: #ffffff;
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -1980,9 +1980,7 @@ button {
 /* footer - start
 ==================================================================================================== */
 /* footer section - start */
-.footer_section {
-  padding-bottom: 25px;
-}
+
 .footer_section.bg_gray {
   background-color: #111;
 }
@@ -2008,13 +2006,6 @@ button {
   color: #999999;
 }
 
-.footer_bottom_boxed {
-  padding: 25px 50px;
-}
-.footer_bottom_boxed.bg_white {
-  background-color: #ffffff;
-  border-radius: 30px 30px 0px 0px;
-}
 
 /* footer section - start */
 /* footer brand list - start */
@@ -2192,9 +2183,7 @@ button {
 .text-white .footer_hotline {
   color: #b2b5ec;
 }
-.text-white .footer_bottom_boxed {
-  background-color: #1f2366;
-}
+
 .text-white .circle_social_links a {
   color: #ababab;
   background-color: #292d77;
@@ -2216,77 +2205,7 @@ button {
 }
 
 /* footer white content - end */
-/* secondary footer - start
-================================================== */
-.secondary_footer {
-  z-index: 1;
-  padding: 80px 0px;
-  position: relative;
-}
-.secondary_footer .border_shapes {
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: -1;
-  width: 100%;
-  position: absolute;
-  background-size: auto;
-  background-position: right center;
-}
-.secondary_footer.text-white p {
-  color: #979797;
-}
-.secondary_footer.text-white a {
-  color: #979797;
-}
-.secondary_footer.text-white a:hover {
-  color: #000;
-}
-.secondary_footer.text-white .footer_contact_info p {
-  color: #ffffff;
-}
-.secondary_footer .footer_about {
-  margin-top: -80px;
-  padding: 80px 45px 30px;
-}
-.secondary_footer .footer_about .brand_logo {
-  display: none;
-}
-.secondary_footer .circle_social_links a {
-  width: 50px;
-  height: 50px;
-  background-color: #212121;
-}
-.secondary_footer .copyright_text {
-  padding: 22px 35px;
-  background-color: #212121;
-  font-size: 24px;
-}
-.secondary_footer .copyright_text .author_links {
-  color: #000;
-}
-.secondary_footer .copyright_text .author_links:hover {
-  color: #ff0d33;
-}
-.secondary_footer .footer_widget_area {
-  padding: 0px;
-  padding-left: 40px;
-}
-.secondary_footer .small_blog .item_title > a {
-  line-height: 1.556;
-}
-.secondary_footer .small_blog:hover .item_title > a {
-  color: #000;
-}
-.secondary_footer .small_blog .post_date {
-  color: #979797;
-}
-.secondary_footer .small_blog .post_date i {
-  color: #000;
-}
 
-/* secondary footer - end
-================================================== */
 /* footer - end
 ==================================================================================================== */
 /* breadcrumb - start
@@ -7274,10 +7193,6 @@ blockquote .blockquote_admin i {
   .footer_widget_area,
 .footer_brand_area {
     padding: 50px 0px;
-  }
-
-  .footer_bottom_boxed {
-    padding: 30px 20px;
   }
 
   .footer_section .brands_list .logo_image {
