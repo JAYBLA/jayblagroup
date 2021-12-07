@@ -135,7 +135,9 @@
 											<span class="help-block">{{ error }}</span>
 										{% endfor %}
 									</div>
-
+									<div class="form_item wow fadeInUp2" data-wow-delay=".4s">
+										<div class="g-recaptcha" data-sitekey="6LdgNoQdAAAAAO2Ie4MmxGwM4W8PLuGce4rJwwdV"></div>
+									</div>									
 									<button type="submit" class="custom_btn bg_default_orange wow fadeInUp2" data-wow-delay=".5s">
 										send message 
 										<span><i class="fa fa-arrow-right"></i></span>
@@ -184,6 +186,7 @@
 	}
   
   </script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 {% endblock javascript %}
     
     

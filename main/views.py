@@ -6,6 +6,8 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.http import JsonResponse
 
+from .decorators import check_recaptcha
+
 def home(request):
     template_name = 'main/home.html'
     context = {
@@ -63,7 +65,7 @@ def contact(request):
     }    
     return render(request, template_name, context)
 
-
+@check_recaptcha
 def process_contact(request):
     if request.is_ajax():
         if request.method == 'POST':
