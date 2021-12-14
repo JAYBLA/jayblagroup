@@ -39,6 +39,8 @@
 		<!-- Side Social Icons -->
 		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/reset.css' %}">
 
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/mobile-nav/css/ma5-menu.min.css' %}">
+
 
 		<!-- Sweet alert -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.5/dist/sweetalert2.min.css">
@@ -120,7 +122,10 @@
 
 								<ul class="mobilemenu_btns_group ul_li_right clearfix">
 									<li>
-										<button type="button" class="mobile_menu_btn"><i class="fa fa-bars"></i></button>
+										<!-- mobile menu toggle button start -->
+										<button class="ma5menu__toggle" type="button">
+											<span class="ma5menu__icon-toggle"></span><span class="ma5menu__sr-only">Menu</span>
+										</button>
 									</li>
 								</ul>
 							</div>
@@ -128,7 +133,7 @@
 
 						<div class="col-lg-6">
 							<nav class="main_menu clearfix">
-								<ul class="ul_li_center clearfix">
+								<ul class="ul_li_center clearfix jayblagroup-mobile-menu">
 									<li class="active">
 										<a href="/">Home</a>
 									</li>
@@ -149,13 +154,6 @@
 						</div>
 
 						<div class="col-lg-3">
-							<ul class="header_icon_btns ul_li_right clearfix">
-								<li>
-									<button type="button" class="mobile_menu_btn">
-										<img src="{% static 'assets/images/icons/bar_dot_1x.png' %}" alt="logo_not_found">
-									</button>
-								</li>
-							</ul>
 						</div>
 
 					</div>
@@ -285,6 +283,21 @@
 		<script src="{% static 'assets/js/custom.js' %}"></script>
 
 		<script src="{% static 'assets/js/sweetalert2.js' %}"></script>
+
+		
+		<script src="{% static 'assets/mobile-nav/js/ma5-menu.min.js' %}"></script>
+
+		<script>
+			$(document).ready(function () {
+				ma5menu({
+					menu: '.jayblagroup-mobile-menu',
+					activeClass: 'active',
+					footer: '#ma5menu-tools',
+					position: 'left',
+					closeOnBodyClick: true
+				});
+			});
+		</script>
 	
 		
 		{% block javascript %}

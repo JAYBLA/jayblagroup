@@ -133,3 +133,31 @@
 .copyright_text{
     font-size: 1.2em;
 }
+
+.ma5menu__toggle {
+    background-color: #ff0d33 !important;
+    border-color: #ff0d33 !important;
+}
+
+.ma5menu__panel {
+    color: rgba(255,255,255,0.1);
+    background-color: #ff0d33 !important;
+    scrollbar-color: #dd0828 #ff0d33 !important;
+}
+
+.ma5menu__btn--enter {
+    background-color: rgba(255,255,255,0.4) !important;
+}
+
+.ma5menu__head {
+    border-bottom: 1px solid #ff0d33 !important;
+    background-color: #ff0d33 !important;
+}
+
+.ma5menu__logo {
+    background-image: none !important;
+}
+
+.ma5menu__path {
+    color: #000000 !important;
+}
