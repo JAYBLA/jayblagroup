@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['.jayblagroup.com', 'jayblagroup.com', 'www.jayblagroup.com']
+    ALLOWED_HOSTS = ['.jayblagroup.co.tz', 'jayblagroup.co.tz', 'www.jayblagroup.co.tz']
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE = True
@@ -176,11 +176,11 @@ if not DEBUG:
 	EMAIL_USE_SSL = config('EMAIL_USE_SSL', cast=bool)
 	EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 else:
-	DEFAULT_FROM_EMAIL = 'noreply@jayblagroup.com'
-	EMAIL_HOST_USER = 'noreply@jayblagroup.com'
+	DEFAULT_FROM_EMAIL = 'noreply@jayblagroup.co.tz'
+	EMAIL_HOST_USER = 'noreply@jayblagroup.co.tz'
 	EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 	EMAIL_FILE_PATH = str(BASE_DIR / 'sent_mails')
-	ADMIN_EMAIL = 'admin@jayblagroup.com'
+	ADMIN_EMAIL = 'admin@jayblagroup.co.tz'
 
 
 # Default primary key field type
